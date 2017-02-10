@@ -48,3 +48,7 @@ func (o *Object) SetInnerHTML(html string) {
 func (o *Object) InnerHTML() string {
 	return o.Get("innerHTML").String()
 }
+
+func (o *Object) ClassList() *DOMTokenList {
+	return &DOMTokenList{o.Get("classList")}
+}
