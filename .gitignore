@@ -1,0 +1,5 @@
+bin/
+pkg/
+src/
+*.js
+*.js.map
