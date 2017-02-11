@@ -18,5 +18,14 @@ func main() {
 	div.AppendChild(strong)
 	print(strong.TextContent())
 
+	print(div.GetBoundingClientRect().X())
+	print(div.GetBoundingClientRect().Y())
+	print(div.GetBoundingClientRect().Width())
+	print(div.GetBoundingClientRect().Height())
+	print(div.GetBoundingClientRect().Top())
+	print(div.GetBoundingClientRect().Right())
+	print(div.GetBoundingClientRect().Bottom())
+	print(div.GetBoundingClientRect().Left())
+
 	div.RemoveAllChildNodes()
 }

@@ -18,6 +18,10 @@ func (o *Object) SetInnerHTML(html string) {
 
 // Methods
 
+func (o *Object) GetBoundingClientRect() *DOMRect {
+	return &DOMRect{o.Call("getBoundingClientRect")}
+}
+
 func (o *Object) QuerySelector(selectors string) *Object {
 	return &Object{o.Call("querySelector", selectors)}
 }
