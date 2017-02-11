@@ -33,7 +33,7 @@ References
 
 .. [5] `JavaScript Remove All Children of a DOM Element <https://siongui.github.io/2012/09/26/javascript-remove-all-children-of-dom-element/>`_
 
-.. [6] `How to do insert After() in JavaScript without using a library? - Stack Overflow <http://stackoverflow.com/questions/4793604/how-to-do-insert-after-in-javascript-without-using-a-library>`_
+.. [6] `How to do insert After() in JavaScript without using a library? - Stack Overflow <http://stackoverflow.com/a/32135318>`_
 
 .. [7] `javascript element position <https://www.google.com/search?q=javascript+element+position>`_
 

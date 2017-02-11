@@ -15,7 +15,7 @@ func main() {
 
 	strong := Document.CreateElement("strong")
 	strong.SetInnerHTML("bold")
-	div.AppendChild(strong)
+	p.AppendAfter(strong)
 	print(strong.TextContent())
 
 	print(div.GetBoundingClientRect().X())
