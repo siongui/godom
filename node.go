@@ -13,3 +13,19 @@ func (o *Object) SetTextContent(s string) {
 func (o *Object) AppendChild(c *Object) {
 	o.Call("appendChild", c)
 }
+
+func (o *Object) HasChildNodes() bool {
+	return o.Call("hasChildNodes").Bool()
+}
+
+func (o *Object) RemoveChild(c *Object) *Object {
+	return &Object{o.Call("removeChild", c)}
+}
+
+func (o *Object) LastChild() *Object {
+	return &Object{o.Get("lastChild")}
+}
+
+func (o *Object) FirstChild() *Object {
+	return &Object{o.Get("firstChild")}
+}

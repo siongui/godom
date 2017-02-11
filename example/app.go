@@ -12,4 +12,11 @@ func main() {
 	p.SetTextContent("content of p")
 	div.AppendChild(p)
 	print(div.InnerHTML())
+
+	strong := Document.CreateElement("strong")
+	strong.SetInnerHTML("bold")
+	div.AppendChild(strong)
+	print(strong.TextContent())
+
+	div.RemoveAllChildNodes()
 }
