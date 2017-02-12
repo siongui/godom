@@ -28,4 +28,11 @@ func main() {
 	print(div.GetBoundingClientRect().Left())
 
 	div.RemoveAllChildNodes()
+
+	p = Document.CreateElement("p")
+	p.SetTextContent("click me")
+	p.AddEventListener("click", func(e Event) {
+		print(e.Target().TextContent())
+	})
+	div.AppendChild(p)
 }
