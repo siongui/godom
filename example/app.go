@@ -4,6 +4,11 @@ import (
 	. "github.com/siongui/godom"
 )
 
+func myListener(e Event) {
+	print(e.Target().TextContent())
+	e.Target().RemoveEventListener("click", myListener)
+}
+
 func main() {
 	div := Document.GetElementById("info")
 	print(div.ClassList().Contains("invisible"))
@@ -31,8 +36,6 @@ func main() {
 
 	p = Document.CreateElement("p")
 	p.SetTextContent("click me")
-	p.AddEventListener("click", func(e Event) {
-		print(e.Target().TextContent())
-	})
+	p.AddEventListener("click", myListener)
 	div.AppendChild(p)
 }
