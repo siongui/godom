@@ -18,6 +18,12 @@ func (o *Object) SetInnerHTML(html string) {
 
 // Methods
 
+// Set focus on the specified element, if it can be focused.
+// https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus
+func (o *Object) Focus() {
+	o.Call("focus")
+}
+
 func (o *Object) GetBoundingClientRect() *DOMRect {
 	return &DOMRect{o.Call("getBoundingClientRect")}
 }
