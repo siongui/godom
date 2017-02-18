@@ -6,7 +6,7 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 PKG="github.com/siongui/godom"
-GO_VERSION=1.7.5
+GO_VERSION=1.8
 DEV_DIR=../
 
 
@@ -40,3 +40,6 @@ download_go:
 install:
 	@echo "\033[92mInstalling GopherJS ...\033[0m"
 	go get -u github.com/gopherjs/gopherjs
+
+clean:
+	rm -rf bin/ pkg/ src/

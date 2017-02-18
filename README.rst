@@ -6,7 +6,7 @@ Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible.
 (via GopherJS_)
 
   - `Ubuntu 16.10`_
-  - `Go 1.7.5`_
+  - `Go 1.8`_
 
 
 UNLICENSE
@@ -43,12 +43,15 @@ References
 
        `javascript - Test if an element contains a class? - Stack Overflow <http://stackoverflow.com/a/5898748>`_
 
+.. [9] | `Who is using GopherJS? : golang <https://www.reddit.com/r/golang/comments/5urqny/who_is_using_gopherjs/>`_
+       | `GopherJS 1.8-1 is released : golang <https://www.reddit.com/r/golang/comments/5upkkc/gopherjs_181_is_released/>`_
+
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript
 .. _GopherJS: http://www.gopherjs.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
-.. _Go 1.7.5: https://golang.org/dl/
+.. _Go 1.8: https://golang.org/dl/
 .. _UNLICENSE: http://unlicense.org/
 
 .. |godoc| image:: https://godoc.org/github.com/gopherjs/gopherjs/js?status.png
