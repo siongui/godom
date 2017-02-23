@@ -2,6 +2,26 @@
 `DOM Manipulation`_ in Go_
 ==========================
 
+.. image:: https://img.shields.io/badge/Language-Go-blue.svg
+   :target: https://golang.org/
+
+.. image:: https://godoc.org/github.com/siongui/godom?status.png
+   :target: https://godoc.org/github.com/siongui/godom
+
+.. image:: https://api.travis-ci.org/siongui/godom.png?branch=master
+   :target: https://travis-ci.org/siongui/godom
+
+.. image:: https://goreportcard.com/badge/github.com/siongui/godom
+   :target: https://goreportcard.com/report/github.com/siongui/godom
+
+.. image:: https://img.shields.io/badge/license-Unlicense-blue.svg
+   :target: https://raw.githubusercontent.com/siongui/godom/master/UNLICENSE
+
+.. image:: https://img.shields.io/badge/Status-Beta-brightgreen.svg
+
+.. image:: https://img.shields.io/twitter/url/https/github.com/siongui/godom.svg?style=social
+   :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
+
 Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible.
 (via GopherJS_)
 
@@ -45,6 +65,9 @@ References
 
 .. [9] | `Who is using GopherJS? : golang <https://www.reddit.com/r/golang/comments/5urqny/who_is_using_gopherjs/>`_
        | `GopherJS 1.8-1 is released : golang <https://www.reddit.com/r/golang/comments/5upkkc/gopherjs_181_is_released/>`_
+
+.. [10] `Go Report Card | Go project code quality report cards <https://goreportcard.com/>`_
+.. [11] ` Shields.io: Quality metadata badges for open source projects  <https://shields.io/>`_
 
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
