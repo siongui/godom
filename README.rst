@@ -67,7 +67,7 @@ References
        | `GopherJS 1.8-1 is released : golang <https://www.reddit.com/r/golang/comments/5upkkc/gopherjs_181_is_released/>`_
 
 .. [10] `Go Report Card | Go project code quality report cards <https://goreportcard.com/>`_
-.. [11] ` Shields.io: Quality metadata badges for open source projects  <https://shields.io/>`_
+.. [11] `Shields.io: Quality metadata badges for open source projects  <https://shields.io/>`_
 
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/

@@ -1,3 +1,6 @@
+// Package godom aims to make DOM manipulation in Go as similar to JavaScript
+// as possible. The Go code is compiled to JavaScript via GopherJS. This package
+// is used for front-end programming.
 package godom
 
 import (
