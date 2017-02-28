@@ -1,6 +1,6 @@
+package godom
 // This file implements Event interface
 // https://developer.mozilla.org/en-US/docs/Web/API/Event
-package godom
 
 import (
 	"github.com/gopherjs/gopherjs/js"

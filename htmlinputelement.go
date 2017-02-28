@@ -1,7 +1,7 @@
+package godom
 // This file implements HTMLInputElement interface
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 // https://developer.mozilla.org/en/docs/Web/API/HTMLInputElement
-package godom
 
 // Properties
 

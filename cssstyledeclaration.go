@@ -1,6 +1,6 @@
+package godom
 // This file implements CSSStyleDeclaration interface
 // https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration
-package godom
 
 import (
 	"github.com/gopherjs/gopherjs/js"

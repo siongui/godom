@@ -1,6 +1,6 @@
+package godom
 // This file implements DOMRect interface
 // https://developer.mozilla.org/en-US/docs/Web/API/DOMRect
-package godom
 
 import (
 	"github.com/gopherjs/gopherjs/js"

@@ -1,6 +1,6 @@
+package godom
 // This file implements DOMTokenList interface
 // https://developer.mozilla.org/en/docs/Web/API/DOMTokenList
-package godom
 
 import (
 	"github.com/gopherjs/gopherjs/js"

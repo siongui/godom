@@ -24,6 +24,12 @@ fmt:
 	@go fmt devserver/*.go
 	@go fmt example/*.go
 
+godoc: local
+	@echo "\033[92mgodoc server...\033[0m"
+	#@godoc -http=:8000
+	@godoc cmd/github.com/siongui/godom
+	#@godoc -url "pkg/github.com/siongui/godom"
+
 local:
 	@[ -d src/${PKG}/ ] || mkdir -p src/${PKG}/
 	@cp *.go src/${PKG}/

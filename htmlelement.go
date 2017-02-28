@@ -1,6 +1,6 @@
+package godom
 // This file implements HTMLElement interface
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
-package godom
 
 // Properties
 

@@ -1,6 +1,6 @@
+package godom
 // This file implements EventTarget interface
 // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget
-package godom
 
 // Methods
 

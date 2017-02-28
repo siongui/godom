@@ -1,5 +1,5 @@
-// This file implements useful functions not in DOM API
 package godom
+// This file implements useful functions not in DOM API
 
 func (o *Object) RemoveAllChildNodes() {
 	for o.HasChildNodes() {
