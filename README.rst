@@ -69,6 +69,8 @@ References
 .. [10] `Go Report Card | Go project code quality report cards <https://goreportcard.com/>`_
 .. [11] `Shields.io: Quality metadata badges for open source projects  <https://shields.io/>`_
 
+.. [12] `HTML DOM Style object <https://www.w3schools.com/jsref/dom_obj_style.asp>`_
+
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript
