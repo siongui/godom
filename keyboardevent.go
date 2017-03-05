@@ -1,4 +1,5 @@
 package godom
+
 // This file implements KeyboardEvent interface
 // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 
