@@ -71,6 +71,15 @@ References
 
 .. [12] `HTML DOM Style object <https://www.w3schools.com/jsref/dom_obj_style.asp>`_
 
+.. [13] | `javascript is focused - Google search <https://www.google.com/search?q=javascript+is+focused>`_
+        | `javascript is focused - DuckDuckGo search <https://duckduckgo.com/?q=javascript+is+focused>`_
+        | `javascript is focused - Ecosia search <https://www.ecosia.org/search?q=javascript+is+focused>`_
+        | `javascript is focused - Qwant search <https://www.qwant.com/?q=javascript+is+focused>`_
+        | `javascript is focused - Bing search <https://www.bing.com/search?q=javascript+is+focused>`_
+        | `javascript is focused - Yahoo search <https://search.yahoo.com/search?p=javascript+is+focused>`_
+        | `javascript is focused - Baidu search <https://www.baidu.com/s?wd=javascript+is+focused>`_
+        | `javascript is focused - Yandex search <https://www.yandex.com/search/?text=javascript+is+focused>`_
+
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript

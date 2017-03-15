@@ -22,3 +22,8 @@ func (o *Object) AppendBefore(n *Object) {
 func (o *Object) AppendAfter(n *Object) {
 	o.ParentNode().InsertBefore(n, o.NextSibling())
 }
+
+// Check if the element is currently focused
+func (o *Object) IsFocused() bool {
+	return o.IsEqualNode(Document.ActiveElement())
+}

@@ -38,4 +38,9 @@ func main() {
 	p.SetTextContent("click me")
 	p.AddEventListener("click", myListener)
 	div.AppendChild(p)
+
+	input := Document.GetElementById("ip")
+	print(input.IsFocused())
+	input.Focus()
+	print(input.IsFocused())
 }

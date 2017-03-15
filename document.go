@@ -3,6 +3,14 @@ package godom
 // This file implements Document interface
 // https://developer.mozilla.org/en-US/docs/Web/API/Document
 
+// Properties
+
+// Returns the currently focused element
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement
+func (o *Object) ActiveElement() *Object {
+	return &Object{o.Get("activeElement")}
+}
+
 // Methods
 
 func (o *Object) CreateElement(tag string) *Object {

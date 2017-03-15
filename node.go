@@ -56,6 +56,16 @@ func (o *Object) InsertBefore(newNode, referenceNode *Object) *Object {
 	return &Object{o.Call("insertBefore", newNode, referenceNode)}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode
+func (o *Object) IsEqualNode(n *Object) bool {
+	return o.Call("isEqualNode", n).Bool()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode
+func (o *Object) IsSameNode(n *Object) bool {
+	return o.Call("isSameNode", n).Bool()
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
 func (o *Object) RemoveChild(c *Object) *Object {
 	return &Object{o.Call("removeChild", c)}
