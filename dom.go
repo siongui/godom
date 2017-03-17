@@ -11,9 +11,22 @@ type Object struct {
 	*js.Object
 }
 
-var Window = &Object{js.Global}
+type window struct {
+	*js.Object
+}
+
+var Window = &window{js.Global}
 var Document = &Object{js.Global.Get("document")}
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/location
+func (w *window) Location() *Location {
+	return &Location{w.Get("location")}
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
+func (w *window) Alert(s string) {
+	w.Call("alert", s)
+}
 func Alert(s string) {
-	Window.Call("alert", s)
+	Window.Alert(s)
 }

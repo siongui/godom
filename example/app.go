@@ -43,4 +43,6 @@ func main() {
 	print(input.IsFocused())
 	input.Focus()
 	print(input.IsFocused())
+
+	print(Window.Location().Hostname())
 }
