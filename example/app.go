@@ -45,4 +45,6 @@ func main() {
 	print(input.IsFocused())
 
 	print(Window.Location().Hostname())
+	print(Window.Navigator().Language())
+	print(Window.Navigator().Languages())
 }

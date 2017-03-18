@@ -23,6 +23,11 @@ func (w *window) Location() *Location {
 	return &Location{w.Get("location")}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator
+func (w *window) Navigator() *Navigator {
+	return &Navigator{w.Get("navigator")}
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
 func (w *window) Alert(s string) {
 	w.Call("alert", s)
