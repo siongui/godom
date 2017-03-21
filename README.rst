@@ -76,7 +76,7 @@ the *Play()* method, you need to write the following code:
   a.Play()
 
 If you use *querySelectorAll* to select a lot of such elements, you need to do a
-lot of type casting, which is really dirturbing.
+lot of type casting, which is really disturbing.
 
 With *godom*, you can write like this:
 
@@ -96,7 +96,7 @@ What if the method/property is not implemented in *godom*?
 *godom* is only a wrapper for GopherJS. If something is not implemented, you can
 still use the GopherJS methods to call or get the method/property you need.
 For example, if the *Play()* method of the audio element is not implemented, you
-can use GopherJS *Call* method to call *Play()* directly:
+can use GopherJS *Call* method to call *play* method directly:
 
 .. code-block:: go
 
