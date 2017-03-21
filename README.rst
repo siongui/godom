@@ -29,6 +29,85 @@ Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible.
   - `Go 1.8`_
 
 
+Why?
+++++
+
+
+Why not use GopherJS directly?
+##############################
+
+Because the code written directly by GopherJS without any wrapper is really
+ugly. For example, if you want to *getElementById*, you need to write:
+
+.. code-block:: go
+
+  import (
+  	"github.com/gopherjs/gopherjs/js"
+  )
+
+  foo := js.Global.Get("document").Call("getElementById", "foo")
+
+With *godom*, you write:
+
+.. code-block:: go
+
+  import (
+  	. "github.com/siongui/godom"
+  )
+
+  foo := Document.GetElementById("foo")
+
+which looks like *JavaScript* and more readable.
+
+Why not use existing `go-js-dom`_?
+##################################
+
+Because it's too restricted, and sometimes need to do a lot of type casting.
+For example, if you have an *audio* element with id *foo* and you want to call
+the *Play()* method, you need to write the following code:
+
+.. code-block:: go
+
+  import (
+  	"honnef.co/go/js/dom"
+  )
+
+  a := dom.GetWindow().Document().GetElementByID("foo").(*dom.HTMLAudioElement)
+  a.Play()
+
+If you use *querySelectorAll* to select a lot of such elements, you need to do a
+lot of type casting, which is really dirturbing.
+
+With *godom*, you can write like this:
+
+.. code-block:: go
+
+  import (
+  	. "github.com/siongui/godom"
+  )
+
+  a := Document.GetElementById("foo")
+  a.Play()
+
+
+What if the method/property is not implemented in *godom*?
+##########################################################
+
+*godom* is only a wrapper for GopherJS. If something is not implemented, you can
+still use the GopherJS methods to call or get the method/property you need.
+For example, if the *Play()* method of the audio element is not implemented, you
+can use GopherJS *Call* method to call *Play()* directly:
+
+.. code-block:: go
+
+  import (
+  	. "github.com/siongui/godom"
+  )
+
+  a := Document.GetElementById("foo")
+  a.Call("play")
+
+
 UNLICENSE
 +++++++++
 
@@ -86,6 +165,7 @@ References
 .. _GopherJS: http://www.gopherjs.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
 .. _Go 1.8: https://golang.org/dl/
+.. _go-js-dom: https://github.com/dominikh/go-js-dom
 .. _UNLICENSE: http://unlicense.org/
 
 .. |godoc| image:: https://godoc.org/github.com/gopherjs/gopherjs/js?status.png
