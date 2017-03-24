@@ -9,12 +9,20 @@ func (o *Object) ClassList() *DOMTokenList {
 	return &DOMTokenList{o.Get("classList")}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
 func (o *Object) InnerHTML() string {
 	return o.Get("innerHTML").String()
 }
-
 func (o *Object) SetInnerHTML(html string) {
 	o.Set("innerHTML", html)
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML
+func (o *Object) OuterHTML() string {
+	return o.Get("outerHTML").String()
+}
+func (o *Object) SetOuterHTML(html string) {
+	o.Set("outerHTML", html)
 }
 
 // Methods
