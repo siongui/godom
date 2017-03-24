@@ -16,20 +16,29 @@
 //
 //   foo := Document.QuerySelector("#foo")
 //
-// If something is not implemented in this library, you can call methods of
+// If something is not implemented in this library, you can use methods of
 // *js.Object of GopherJS to manipulate JavaScript DOM API directly.
 //
 // For example, if **textContent** property of foo is not implemented, you can
-// use Get method to get the **textContent** property as follows:
+// use Get method of *js.Object in Gopher to get the **textContent** property as
+// follows:
 //
 //   t := foo.Get("textContent").String()
 //
-// If some method is not implemented, you can use Call method provided by
-// GopherJS. For example, if foo is audio element and **play** method of foo is
-// not implemented. You can use GopherJS Call method to call **play** method of
-// foo directly.
+// If some DOM method is not implemented, you can use Call method provided by
+// *js.Object in GopherJS. For example, if foo is an audio element and **play**
+// method of foo is not implemented. You can use Call method of *js.Object in
+// GopherJS to call **play** method of DOM audio element directly.
 //
 //   foo.Call("play")
+//
+// You see also read the godoc of GopherJS:
+//
+//   https://godoc.org/github.com/gopherjs/gopherjs/js
+//   https://godoc.org/github.com/gopherjs/gopherjs/js#Object
+//   https://godoc.org/github.com/gopherjs/gopherjs/js#Object.Call
+//   https://godoc.org/github.com/gopherjs/gopherjs/js#Object.Set
+//   https://godoc.org/github.com/gopherjs/gopherjs/js#Object.Get
 //
 package godom
 
