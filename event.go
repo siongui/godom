@@ -19,3 +19,8 @@ func (e Event) Target() *Object {
 }
 
 // Methods
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+func (e Event) PreventDefault() {
+	e.Call("preventDefault")
+}

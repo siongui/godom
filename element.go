@@ -27,14 +27,22 @@ func (o *Object) SetOuterHTML(html string) {
 
 // Methods
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
+func (o *Object) GetAttribute(attributeName string) string {
+	return o.Call("getAttribute", attributeName).String()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 func (o *Object) GetBoundingClientRect() *DOMRect {
 	return &DOMRect{o.Call("getBoundingClientRect")}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector
 func (o *Object) QuerySelector(selectors string) *Object {
 	return &Object{o.Call("querySelector", selectors)}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll
 func (o *Object) QuerySelectorAll(selectors string) []*Object {
 	nodeList := o.Call("querySelectorAll", selectors)
 	length := nodeList.Get("length").Int()
