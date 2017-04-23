@@ -48,4 +48,27 @@ func main() {
 	print(Window.Location().Hostname())
 	print(Window.Navigator().Language())
 	print(Window.Navigator().Languages())
+
+	print(Window.History().Length())
+
+	ih := Document.QuerySelector("#infoHistory")
+	persons := Document.QuerySelectorAll(".person")
+	for _, person := range persons {
+		person.AddEventListener("click", func(e Event) {
+			e.PreventDefault()
+			p := e.Target()
+			href := p.GetAttribute("href")
+			content := p.Dataset().Get("content").String()
+			Window.History().PushState(content, "", href)
+			ih.SetInnerHTML(content)
+		})
+	}
+
+	Window.AddEventListener("popstate", func(e Event) {
+		if e.Get("state") == nil {
+			ih.SetInnerHTML("Entry Page")
+		} else {
+			ih.SetInnerHTML(e.Get("state").String())
+		}
+	})
 }

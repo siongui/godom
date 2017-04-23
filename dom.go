@@ -75,10 +75,33 @@ func (w *window) Navigator() *Navigator {
 	return &Navigator{w.Get("navigator")}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/history
+func (w *window) History() *History {
+	return &History{w.Get("history")}
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
 func (w *window) Alert(s string) {
 	w.Call("alert", s)
 }
 func Alert(s string) {
 	Window.Alert(s)
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+func (w *window) AddEventListener(t string, listener func(Event), args ...interface{}) {
+	if len(args) == 1 {
+		w.Call("addEventListener", t, listener, args[0])
+	} else {
+		w.Call("addEventListener", t, listener)
+	}
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
+func (w *window) RemoveEventListener(t string, listener func(Event), args ...interface{}) {
+	if len(args) == 1 {
+		w.Call("removeEventListener", t, listener, args[0])
+	} else {
+		w.Call("removeEventListener", t, listener)
+	}
 }
