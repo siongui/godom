@@ -108,6 +108,44 @@ can use GopherJS *Call* method to call *play* method directly:
   a.Call("play")
 
 
+Issues
+++++++
+
+null test
+#########
+
+Test if event.state is null in ``popstate`` event listener:
+
+.. code-block:: go
+
+  	ih := Document.QuerySelector("#infoHistory")
+
+  	Window.AddEventListener("popstate", func(e Event) {
+  		if e.Get("state") == nil {
+  			ih.SetInnerHTML("Entry Page")
+  		} else {
+  			ih.SetInnerHTML(e.Get("state").String())
+  		}
+  	})
+
+
+HTML dataset (data-* attribute)
+###############################
+
+Assume we have the following element:
+
+.. code-block:: html
+
+  <p id="foo" data-content="content of person 1"></p>
+
+You can access the ``data-content`` as follows:
+
+.. code-block:: go
+
+  p := Document.QuerySelector("#foo")
+  content := p.Dataset().Get("content").String()
+
+
 UNLICENSE
 +++++++++
 

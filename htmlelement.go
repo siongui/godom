@@ -3,10 +3,6 @@ package godom
 // This file implements HTMLElement interface
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
 
-import (
-	"github.com/gopherjs/gopherjs/js"
-)
-
 // Properties
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
@@ -15,8 +11,8 @@ func (o *Object) Style() *CSSStyleDeclaration {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
-func (o *Object) Dataset() *js.Object {
-	return o.Get("dataset")
+func (o *Object) Dataset() *Object {
+	return &Object{o.Get("dataset")}
 }
 
 // Methods
