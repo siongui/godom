@@ -25,6 +25,11 @@ func (o *Object) SetOuterHTML(html string) {
 	o.Set("outerHTML", html)
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName
+func (o *Object) TagName() string {
+	return o.Get("tagName").String()
+}
+
 // Methods
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
