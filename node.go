@@ -5,6 +5,17 @@ package godom
 
 // Properties
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes
+func (o *Object) ChildNodes() []*Object {
+	nodeList := o.Get("childNodes")
+	length := nodeList.Get("length").Int()
+	var nodes []*Object
+	for i := 0; i < length; i++ {
+		nodes = append(nodes, &Object{nodeList.Call("item", i)})
+	}
+	return nodes
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild
 func (o *Object) FirstChild() *Object {
 	return &Object{o.Get("firstChild")}
@@ -18,6 +29,19 @@ func (o *Object) LastChild() *Object {
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling
 func (o *Object) NextSibling() *Object {
 	return &Object{o.Get("nextSibling")}
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
+func (o *Object) NodeType() int {
+	return o.Get("nodeType").Int()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue
+func (o *Object) NodeValue() string {
+	return o.Get("nodeValue").String()
+}
+func (o *Object) SetNodeValue(s string) {
+	o.Set("nodeValue", s)
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode
