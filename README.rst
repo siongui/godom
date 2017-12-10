@@ -28,6 +28,8 @@ Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible.
   - `Ubuntu 16.10`_
   - `Go 1.8`_
 
+.. contents:: **Table of Content**
+
 
 Why?
 ++++
@@ -106,6 +108,15 @@ can use GopherJS *Call* method to call *play* method directly:
 
   a := Document.GetElementById("foo")
   a.Call("play")
+
+
+Code Example
+++++++++++++
+
+- `Frontend Programming in Go`_: If you have no experience of GopherJS before,
+  read this.
+- `Synonyms - Go and JavaScript`_: If you have some experience about GopherJS,
+  this serves as references for quick start.
 
 
 Issues
@@ -205,6 +216,8 @@ References
 .. _Go 1.8: https://golang.org/dl/
 .. _go-js-dom: https://github.com/dominikh/go-js-dom
 .. _UNLICENSE: http://unlicense.org/
+.. _Frontend Programming in Go: https://siongui.github.io/2017/12/04/frontend-programming-in-go/
+.. _Synonyms - Go and JavaScript: https://siongui.github.io/2017/12/07/synonyms-go-and-javascript/
 
 .. |godoc| image:: https://godoc.org/github.com/gopherjs/gopherjs/js?status.png
    :target: https://godoc.org/github.com/gopherjs/gopherjs/js
