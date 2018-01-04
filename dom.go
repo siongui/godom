@@ -105,3 +105,25 @@ func (w *window) RemoveEventListener(t string, listener func(Event), args ...int
 		w.Call("removeEventListener", t, listener)
 	}
 }
+
+// Properties of window object
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/pageXOffset
+func (w *window) PageXOffset() float64 {
+	return w.Get("pageXOffset").Float()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset
+func (w *window) PageYOffset() float64 {
+	return w.Get("pageYOffset").Float()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollX
+func (w *window) ScrollX() float64 {
+	return w.Get("scrollX").Float()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+func (w *window) ScrollY() float64 {
+	return w.Get("scrollY").Float()
+}

@@ -71,4 +71,9 @@ func main() {
 			ih.SetInnerHTML(e.Get("state").String())
 		}
 	})
+
+	println(Window.PageXOffset())
+	println(Window.PageYOffset())
+	println(Window.ScrollX())
+	println(Window.ScrollY())
 }

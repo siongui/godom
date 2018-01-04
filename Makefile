@@ -6,7 +6,7 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 PKG="github.com/siongui/godom"
-GO_VERSION=1.8
+GO_VERSION=1.9.2
 DEV_DIR=../
 
 
