@@ -50,9 +50,6 @@ type window struct {
 // equivalent to window object in JavaScript DOM API.
 var Window = &window{js.Global()}
 
-// equivalent to document object in JavaScript DOM API.
-var Document = &Object{js.Global().Get("document")}
-
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
 func (w *window) Alert(s string) {
 	w.Call("alert", s)
