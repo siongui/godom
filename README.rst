@@ -22,11 +22,11 @@
 .. image:: https://img.shields.io/twitter/url/https/github.com/siongui/godom.svg?style=social
    :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
 
-Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible.
-(via GopherJS_)
+Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible via
+GopherJS_. For DOM Manipulation via WebAssembly_, visit wasm_ directory.
 
-  - `Ubuntu 16.10`_
-  - `Go 1.8`_
+  - `Ubuntu 18.04`_
+  - Go_
 
 .. contents:: **Table of Content**
 
@@ -212,7 +212,9 @@ References
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript
 .. _GopherJS: http://www.gopherjs.org/
-.. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
+.. _WebAssembly: https://duckduckgo.com/?q=webassembly
+.. _wasm: wasm
+.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
 .. _Go 1.8: https://golang.org/dl/
 .. _go-js-dom: https://github.com/dominikh/go-js-dom
 .. _UNLICENSE: http://unlicense.org/

@@ -20,8 +20,8 @@
 // *js.Object of GopherJS to manipulate JavaScript DOM API directly.
 //
 // For example, if **textContent** property of foo is not implemented, you can
-// use Get method of *js.Object in Gopher to get the **textContent** property as
-// follows:
+// use Get method of *js.Object in GopherJS to get the **textContent** property
+// as follows:
 //
 //   t := foo.Get("textContent").String()
 //
@@ -32,7 +32,7 @@
 //
 //   foo.Call("play")
 //
-// You see also read the godoc of GopherJS:
+// You can also read the godoc of GopherJS:
 //
 //   https://godoc.org/github.com/gopherjs/gopherjs/js
 //   https://godoc.org/github.com/gopherjs/gopherjs/js#Object
