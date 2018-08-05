@@ -28,6 +28,14 @@ WebAssembly_. For DOM Manipulation via GopherJS_, visit root_ directory.
   - `Ubuntu 18.04`_
   - Go_ (1.11 or later)
 
+
+Install
++++++++
+
+.. code-block:: bash
+
+  $ GOARCH=wasm GOOS=js go get -u github.com/siongui/godom/wasm
+
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript
