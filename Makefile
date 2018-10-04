@@ -23,6 +23,7 @@ fmt:
 	@go fmt *.go
 	@go fmt devserver/*.go
 	@go fmt example/*.go
+	@go fmt wasm/*.go
 
 godoc: local
 	@echo "\033[92mgodoc server...\033[0m"
