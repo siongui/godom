@@ -105,3 +105,4 @@ Code Example
 .. _root: https://github.com/siongui/godom
 .. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
 .. _UNLICENSE: http://unlicense.org/
+.. _Frontend Programming in Go: https://siongui.github.io/2017/12/04/frontend-programming-in-go/
