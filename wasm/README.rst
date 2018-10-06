@@ -94,6 +94,13 @@ Code Example
 - `Frontend Programming in Go`_: If you have no experience of Go WebAssembly
   before, read this.
 
+
+Reference
++++++++++
+
+.. [1] `WebAssembly · golang/go Wiki · GitHub <https://github.com/golang/go/wiki/WebAssembly>`_
+
+
 .. %s/o \*Object/v Value/gc
 
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
