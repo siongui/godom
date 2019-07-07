@@ -30,6 +30,24 @@ func (v Value) TagName() string {
 	return v.Get("tagName").String()
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+
+func (v Value) TextContent() string {
+	return v.Get("textContent").String()
+}
+func (v Value) SetTextContent(content string) {
+	v.Set("textContent", content)
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/innerText
+func (v Value) InnerText() string {
+	return v.Get("innerText").String()
+}
+
+func (v Value) SetInnerText(text string) string {
+	return v.Set("innerText", text)
+}
+
 // Methods
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute

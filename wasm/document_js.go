@@ -32,3 +32,8 @@ func (v Value) GetElementById(id string) Value {
 func (v Value) Write(markup string) {
 	Document.Call("write", markup)
 }
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln
+func (v Value) Writeln(markup string) {
+	Document.call("writeln", markup)
+}
