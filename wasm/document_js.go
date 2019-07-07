@@ -13,12 +13,12 @@ func (v Value) ActiveElement() Value {
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 func (v Value) Cookie() Value {
-	return Document.Get("cookie")
+	return Document.Get("cookie").String()
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/title
 func (v Value) Title() Value {
-	return Document.Get("title")
+	return Document.Get("title").String()
 }
 func (v Value) SetTitle(title string) Value {
 	Document.set("title", title)
