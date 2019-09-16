@@ -1,4 +1,4 @@
-package wasm
+package main
 
 // This file implements Document interface
 // https://developer.mozilla.org/en-US/docs/Web/API/Document

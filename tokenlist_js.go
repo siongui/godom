@@ -1,4 +1,6 @@
-package wasm
+//+build wasm
+
+package main
 
 // This file implements DOMTokenList interface
 // https://developer.mozilla.org/en/docs/Web/API/DOMTokenList
@@ -11,6 +13,7 @@ type DOMTokenList struct {
 	js.Value
 }
 
+// Length - get DOM list length
 func (t DOMTokenList) Length() int {
 	return t.Get("length").Int()
 }

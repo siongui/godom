@@ -1,4 +1,6 @@
-package wasm
+//+build wasm
+
+package main
 
 // This file implements DOMRect interface
 // https://developer.mozilla.org/en-US/docs/Web/API/DOMRect
@@ -11,10 +13,12 @@ type DOMRect struct {
 	js.Value
 }
 
+// X - get x coordinate of DOMRect
 func (r DOMRect) X() float64 {
 	return r.Get("x").Float()
 }
 
+// Y - get y coordinate of DOMRect
 func (r DOMRect) Y() float64 {
 	return r.Get("y").Float()
 }

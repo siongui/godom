@@ -1,4 +1,6 @@
-package wasm
+//+build wasm
+
+package main
 
 // This file implements Element interface
 // https://developer.mozilla.org/en-US/docs/Web/API/Element
