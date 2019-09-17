@@ -1,5 +1,3 @@
-//+build wasm
-
 package main
 
 // This file implements Element interface

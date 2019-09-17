@@ -1,5 +1,3 @@
-//+build wasm
-
 package main
 
 // This file implements DOMRect interface
@@ -23,10 +21,12 @@ func (r DOMRect) Y() float64 {
 	return r.Get("y").Float()
 }
 
+// Width - get width of DOMRect
 func (r DOMRect) Width() float64 {
 	return r.Get("width").Float()
 }
 
+// Height - get height of DOMRect
 func (r DOMRect) Height() float64 {
 	return r.Get("height").Float()
 }
