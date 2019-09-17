@@ -1,4 +1,4 @@
-package main
+package godom
 
 // This file implements DOMTokenList interface
 // https://developer.mozilla.org/en/docs/Web/API/DOMTokenList

@@ -1,4 +1,4 @@
-package main
+package godom
 
 import (
 	"syscall/js"
