@@ -1,12 +1,12 @@
 # cannot use relative path in GOROOT, otherwise 6g not found. For example,
 #   export GOROOT=../go  (=> 6g not found)
 # it is also not allowed to use relative path in GOPATH
-export GOROOT=$(realpath ../go)
-export GOPATH=$(realpath .)
+export GOROOT=$(realpath ../paligo/go/)
+export GOPATH=$(realpath ../paligo/)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 PKG="github.com/siongui/godom"
-GO_VERSION=1.9.2
+GO_VERSION=1.12.17
 DEV_DIR=../
 
 
@@ -32,8 +32,8 @@ godoc: local
 	#@godoc -url "pkg/github.com/siongui/godom"
 
 local:
-	@[ -d src/${PKG}/ ] || mkdir -p src/${PKG}/
-	@cp *.go src/${PKG}/
+	@[ -d ${GOPATH}/src/${PKG}/ ] || mkdir -p ${GOPATH}/src/${PKG}/
+	@cp *.go ${GOPATH}/src/${PKG}/
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"
@@ -41,8 +41,9 @@ update_ubuntu:
 
 download_go:
 	@echo "\033[92mDownloading and Installing Go ...\033[0m"
-	@cd $(DEV_DIR) ; wget https://storage.googleapis.com/golang/go$(GO_VERSION).linux-amd64.tar.gz
-	@cd $(DEV_DIR) ; tar xvzf go$(GO_VERSION).linux-amd64.tar.gz
+	@wget https://golang.org/dl/go$(GO_VERSION).linux-amd64.tar.gz
+	@tar -xvzf go$(GO_VERSION).linux-amd64.tar.gz
+	@rm go$(GO_VERSION).linux-amd64.tar.gz
 
 install:
 	@echo "\033[92mInstalling GopherJS ...\033[0m"

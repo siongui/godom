@@ -76,6 +76,7 @@ func main() {
 	println(Window.PageYOffset())
 	println(Window.ScrollX())
 	println(Window.ScrollY())
+	println(Window.Location().Pathname())
 
 	Document.Write("<br><strong>Hello</strong> <em>World</em>")
 }
