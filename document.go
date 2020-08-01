@@ -11,6 +11,12 @@ func (o *Object) ActiveElement() *Object {
 	return &Object{o.Get("activeElement")}
 }
 
+// Properties
+
+func (o *Object) DocumentElement() *Object {
+	return &Object{o.Get("documentElement")}
+}
+
 // Methods
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement

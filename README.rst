@@ -119,9 +119,6 @@ Code Example
   this serves as references for quick start.
 
 
-Issues
-++++++
-
 null test
 #########
 
@@ -155,6 +152,37 @@ You can access the ``data-content`` as follows:
 
   p := Document.QuerySelector("#foo")
   content := p.Dataset().Get("content").String()
+
+
+XML/XSLT
+########
+
+We will transform Tipitaka XML to HTML and append to the following *div*.
+
+.. code-block:: html
+
+  <div id="xml"></div>
+
+The frontend code:
+
+.. code-block:: go
+
+  // example for xslt
+  xsltProcessor := NewXSLTProcessor()
+
+  // Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
+  myXMLHTTPRequest := NewXMLHttpRequest()
+  myXMLHTTPRequest.Open("GET", "https://siongui.github.io/tipitaka-romn/cscd/vin01m.mul0.xml", false)
+  myXMLHTTPRequest.Send()
+
+  xslRef := myXMLHTTPRequest.ResponseXML()
+
+  // Finally import the .xsl
+  xsltProcessor.ImportStylesheet(xslRef)
+
+  // Cannot append DOM element to DIV node: Uncaught HierarchyRequestError: Failed to execute 'appendChild' on 'Node'
+  // https://stackoverflow.com/a/29643573
+  Document.GetElementById("xml").AppendChild(xslRef.DocumentElement())
 
 
 UNLICENSE

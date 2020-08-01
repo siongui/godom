@@ -79,4 +79,22 @@ func main() {
 	println(Window.Location().Pathname())
 
 	Document.Write("<br><strong>Hello</strong> <em>World</em>")
+
+	// example for xslt
+	xsltProcessor := NewXSLTProcessor()
+
+	// Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
+	myXMLHTTPRequest := NewXMLHttpRequest()
+	//myXMLHTTPRequest.Open("GET", "https://tipitaka.org/romn/cscd/vin01m.mul0.xml", false)
+	myXMLHTTPRequest.Open("GET", "https://siongui.github.io/tipitaka-romn/cscd/vin01m.mul0.xml", false)
+	myXMLHTTPRequest.Send()
+
+	xslRef := myXMLHTTPRequest.ResponseXML()
+
+	// Finally import the .xsl
+	xsltProcessor.ImportStylesheet(xslRef)
+
+	// Cannot append DOM element to DIV node: Uncaught HierarchyRequestError: Failed to execute 'appendChild' on 'Node'
+	// https://stackoverflow.com/a/29643573
+	Document.GetElementById("xml").AppendChild(xslRef.DocumentElement())
 }
