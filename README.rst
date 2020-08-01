@@ -5,10 +5,10 @@
 .. image:: https://img.shields.io/badge/Language-Go-blue.svg
    :target: https://golang.org/
 
-.. image:: https://godoc.org/github.com/siongui/godom?status.png
+.. image:: https://godoc.org/github.com/siongui/godom?status.svg
    :target: https://godoc.org/github.com/siongui/godom
 
-.. image:: https://api.travis-ci.org/siongui/godom.png?branch=master
+.. image:: https://api.travis-ci.org/siongui/godom.svg?branch=master
    :target: https://travis-ci.org/siongui/godom
 
 .. image:: https://goreportcard.com/badge/github.com/siongui/godom
@@ -25,7 +25,7 @@
 Make `DOM Manipulation`_ in Go_ as similar to JavaScript_ as possible via
 GopherJS_. For DOM Manipulation via WebAssembly_, visit wasm_ directory.
 
-  - `Ubuntu 18.04`_
+  - `Ubuntu 20.04`_
   - Go_
 
 .. contents:: **Table of Content**
@@ -211,13 +211,13 @@ References
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
 .. _JavaScript: https://www.google.com/search?q=JavaScript
-.. _GopherJS: http://www.gopherjs.org/
+.. _GopherJS: https://github.com/gopherjs/gopherjs
 .. _WebAssembly: https://duckduckgo.com/?q=webassembly
 .. _wasm: wasm
-.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
+.. _Ubuntu 20.04: https://releases.ubuntu.com/20.04/
 .. _Go 1.8: https://golang.org/dl/
 .. _go-js-dom: https://github.com/dominikh/go-js-dom
-.. _UNLICENSE: http://unlicense.org/
+.. _UNLICENSE: https://unlicense.org/
 .. _Frontend Programming in Go: https://siongui.github.io/2017/12/04/frontend-programming-in-go/
 .. _Synonyms - Go and JavaScript: https://siongui.github.io/2017/12/07/synonyms-go-and-javascript/
 
