@@ -64,8 +64,13 @@ func (o *Object) SetTextContent(s string) {
 // Methods
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
-func (o *Object) AppendChild(c *Object) {
-	o.Call("appendChild", c)
+func (o *Object) AppendChild(c *Object) *Object {
+	return &Object{o.Call("appendChild", c)}
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
+func (o *Object) Contains(n *Object) bool {
+	return o.Call("contains", n).Bool()
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes
@@ -90,7 +95,22 @@ func (o *Object) IsSameNode(n *Object) bool {
 	return o.Call("isSameNode", n).Bool()
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix
+func (o *Object) LookupPrefix() string {
+	return o.Call("lookupPrefix").String()
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+func (o *Object) Normalize() {
+	o.Call("normalize")
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
 func (o *Object) RemoveChild(c *Object) *Object {
 	return &Object{o.Call("removeChild", c)}
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild
+func (o *Object) ReplaceChild(newChild, oldChild *Object) *Object {
+	return &Object{o.Call("replaceChild", newChild, oldChild)}
 }

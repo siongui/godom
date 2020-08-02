@@ -42,6 +42,17 @@ func (o *Object) GetBoundingClientRect() *DOMRect {
 	return &DOMRect{o.Call("getBoundingClientRect")}
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName
+func (o *Object) GetElementsByTagName(tagName string) []*Object {
+	nodeList := o.Call("getElementsByTagName", tagName)
+	length := nodeList.Get("length").Int()
+	var nodes []*Object
+	for i := 0; i < length; i++ {
+		nodes = append(nodes, &Object{nodeList.Call("item", i)})
+	}
+	return nodes
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector
 func (o *Object) QuerySelector(selectors string) *Object {
 	return &Object{o.Call("querySelector", selectors)}
