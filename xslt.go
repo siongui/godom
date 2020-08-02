@@ -21,3 +21,11 @@ func NewXSLTProcessor() *XSLTProcessor {
 func (x *XSLTProcessor) ImportStylesheet(node *Object) {
 	x.Call("importStylesheet", node)
 }
+
+func (x *XSLTProcessor) TransformToFragment(node, document *Object) *Object {
+	return &Object{x.Call("transformToFragment", node, document)}
+}
+
+func (x *XSLTProcessor) TransformToDocument(node *Object) *Object {
+	return &Object{x.Call("transformToDocument", node)}
+}

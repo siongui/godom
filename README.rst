@@ -157,7 +157,7 @@ You can access the ``data-content`` as follows:
 XML/XSLT
 ########
 
-We will transform Tipitaka XML to HTML and append to the following *div*.
+We will transform Tipitaka XML to HTML and append it to the following *div*.
 
 .. code-block:: html
 
@@ -167,22 +167,32 @@ The frontend code:
 
 .. code-block:: go
 
-  // example for xslt
+  // Basic Example - XSLT: Extensible Stylesheet Language Transformations | MDN
+  // https://developer.mozilla.org/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
   xsltProcessor := NewXSLTProcessor()
 
   // Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
   myXMLHTTPRequest := NewXMLHttpRequest()
-  myXMLHTTPRequest.Open("GET", "https://siongui.github.io/tipitaka-romn/cscd/vin01m.mul0.xml", false)
+  //myXMLHTTPRequest.Open("GET", "https://tipitaka.org/romn/cscd/tipitaka-latn.xsl", false)
+  myXMLHTTPRequest.Open("GET", "https://siongui.github.io/tipitaka-romn/cscd/tipitaka-latn.xsl", false)
   myXMLHTTPRequest.Send()
 
-  xslRef := myXMLHTTPRequest.ResponseXML()
+  xslStylesheet := myXMLHTTPRequest.ResponseXML()
 
   // Finally import the .xsl
-  xsltProcessor.ImportStylesheet(xslRef)
+  xsltProcessor.ImportStylesheet(xslStylesheet)
 
-  // Cannot append DOM element to DIV node: Uncaught HierarchyRequestError: Failed to execute 'appendChild' on 'Node'
-  // https://stackoverflow.com/a/29643573
-  Document.GetElementById("xml").AppendChild(xslRef.DocumentElement())
+  // load the xml file
+  myXMLHTTPRequest2 := NewXMLHttpRequest()
+  //myXMLHTTPRequest.Open("GET", "https://tipitaka.org/romn/cscd/vin01m.mul0.xml", false)
+  myXMLHTTPRequest2.Open("GET", "https://siongui.github.io/tipitaka-romn/cscd/vin01m.mul0.xml", false)
+  myXMLHTTPRequest2.Send()
+
+  xmlDoc := myXMLHTTPRequest2.ResponseXML()
+
+  fragment := xsltProcessor.TransformToFragment(xmlDoc, Document)
+
+  Document.GetElementById("xml").AppendChild(fragment)
 
 
 UNLICENSE
