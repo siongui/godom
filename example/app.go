@@ -80,6 +80,10 @@ func main() {
 
 	Document.Write("<br><strong>Hello</strong> <em>World</em>")
 
+	Document.Set("myhandler", func(s string) {
+		Alert(s)
+	})
+
 	xsltExample()
 }
 

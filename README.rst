@@ -205,7 +205,7 @@ This example show you how to register onclick event handler via
 
 .. code-block:: html
 
-  <div onclick="myhandler('Hi')">Say Hi</div>
+  <div onclick="myhandler('Hi')">Click me to say Hi<div>
 
 **Go/GopherJS**:
 
