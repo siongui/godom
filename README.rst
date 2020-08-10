@@ -195,6 +195,27 @@ The frontend code:
   Document.GetElementById("xml").AppendChild(fragment)
 
 
+HTML onevent Attribute
+######################
+
+This example show you how to register onclick event handler via
+`HTML onclick attribute`_.
+
+**HTML**:
+
+.. code-block:: html
+
+  <div onclick="myhandler('Hi')">Say Hi</div>
+
+**Go/GopherJS**:
+
+.. code-block:: go
+
+  Document.Set("myhandler", func(s string) {
+  	Alert(s)
+  })
+
+
 UNLICENSE
 +++++++++
 
@@ -258,6 +279,7 @@ References
 .. _UNLICENSE: https://unlicense.org/
 .. _Frontend Programming in Go: https://siongui.github.io/2017/12/04/frontend-programming-in-go/
 .. _Synonyms - Go and JavaScript: https://siongui.github.io/2017/12/07/synonyms-go-and-javascript/
+.. _HTML onclick attribute: https://www.google.com/search?q=HTML+onclick+attribute
 
 .. |godoc| image:: https://godoc.org/github.com/gopherjs/gopherjs/js?status.png
    :target: https://godoc.org/github.com/gopherjs/gopherjs/js
