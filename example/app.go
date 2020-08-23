@@ -85,6 +85,7 @@ func main() {
 	})
 
 	xsltExample()
+	localStorageExample()
 }
 
 func xsltExample() {
@@ -114,4 +115,14 @@ func xsltExample() {
 	fragment := xsltProcessor.TransformToFragment(xmlDoc, Document)
 
 	Document.GetElementById("xml").AppendChild(fragment)
+}
+
+func localStorageExample() {
+	LocalStorage.Clear()
+	LocalStorage.SetItem("abc", "123")
+	println(LocalStorage.GetItem("abc"))
+	println(LocalStorage.Length())
+	println(LocalStorage.Key(0))
+	LocalStorage.RemoveItem("abc")
+	println(LocalStorage.Length())
 }
