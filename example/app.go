@@ -119,7 +119,13 @@ func xsltExample() {
 
 func localStorageExample() {
 	LocalStorage.Clear()
+	if LocalStorage.IsKeyExist("abc") == true {
+		panic(`LocalStorage.IsKeyExist("abc") == true`)
+	}
 	LocalStorage.SetItem("abc", "123")
+	if LocalStorage.IsKeyExist("abc") == false {
+		panic(`LocalStorage.IsKeyExist("abc") == false`)
+	}
 	println(LocalStorage.GetItem("abc"))
 	println(LocalStorage.Length())
 	println(LocalStorage.Key(0))

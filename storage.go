@@ -47,3 +47,9 @@ func (s *Storage) RemoveItem(keyName string) {
 func (s *Storage) Clear() {
 	s.Call("clear")
 }
+
+// IsKeyExist is not part of Web Storage API. This method tests if a key exists
+// in the Storage (localStorage/sessionStorage) interface.
+func (s *Storage) IsKeyExist(keyName string) bool {
+	return s.Call("getItem", keyName) != nil
+}
