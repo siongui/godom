@@ -37,6 +37,11 @@ func (o *Object) GetAttribute(attributeName string) string {
 	return o.Call("getAttribute", attributeName).String()
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute
+func (o *Object) HasAttribute(attributeName string) bool {
+	return o.Call("hasAttribute", attributeName).Bool()
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 func (o *Object) GetBoundingClientRect() *DOMRect {
 	return &DOMRect{o.Call("getBoundingClientRect")}
