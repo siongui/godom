@@ -216,6 +216,14 @@ This example show you how to register onclick event handler via
   })
 
 
+`Element.getAttribute()`_
+#########################
+
+Before using `Element.getAttribute()`_, call `Element.hasAttribute()`_ first to
+check if the attribute exists or not. Otherwise something unexpected will
+happen.
+
+
 UNLICENSE
 +++++++++
 
@@ -280,6 +288,8 @@ References
 .. _Frontend Programming in Go: https://siongui.github.io/2017/12/04/frontend-programming-in-go/
 .. _Synonyms - Go and JavaScript: https://siongui.github.io/2017/12/07/synonyms-go-and-javascript/
 .. _HTML onclick attribute: https://www.google.com/search?q=HTML+onclick+attribute
+.. _Element.getAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
+.. _Element.hasAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute
 
 .. |godoc| image:: https://godoc.org/github.com/gopherjs/gopherjs/js?status.png
    :target: https://godoc.org/github.com/gopherjs/gopherjs/js

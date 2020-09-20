@@ -32,6 +32,9 @@ func (o *Object) TagName() string {
 
 // Methods
 
+// Call HasAttribute to check if the attribute exists or not before using this
+// method (GetAttribute). FIXME: Return (string, bool) to indicate the existence
+// of the attribute?
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
 func (o *Object) GetAttribute(attributeName string) string {
 	return o.Call("getAttribute", attributeName).String()
