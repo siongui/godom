@@ -274,6 +274,9 @@ References
         | `javascript is focused - Yahoo search <https://search.yahoo.com/search?p=javascript+is+focused>`_
         | `javascript is focused - Baidu search <https://www.baidu.com/s?wd=javascript+is+focused>`_
         | `javascript is focused - Yandex search <https://www.yandex.com/search/?text=javascript+is+focused>`_
+        
+.. [14] `Javascript Cheat Sheet <https://www.interviewbit.com/javascript-cheat-sheet/>`_
+
 
 .. _DOM Manipulation: https://www.google.com/search?q=DOM+Manipulation
 .. _Go: https://golang.org/
